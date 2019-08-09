@@ -7,6 +7,12 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 
 const ConnectWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`
+const MiddleConnectWrapper = styled.div`
     position: relative;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
@@ -15,32 +21,32 @@ const ConnectWrapper = styled.div`
     max-width: 400px;
     max-height: 400px;
     border-radius: 50%;
-    margin: auto;
 `
-
-const ImageWrapper = styled.p`
+const ImageWrapper = styled.div`
     height: 60%;
     width: 60%;
     margin: auto;
 `
-const ConnectCircle = styled.p`
+const ConnectCircle = styled.div`
+    align-self: flex-end;
     background: white;
     height: 10vw;
     width: 10vw;
+    border-radius: 50%;
 `
 
 function ConnectGrid(props) {
 
     return (
-        <Grid>
-            <ConnectCircle>GITHUB</ConnectCircle>
-            <ConnectWrapper>
+        <ConnectWrapper>
+            <ConnectCircle><p>GITHUB</p></ConnectCircle>
+            <MiddleConnectWrapper>
                 <ImageWrapper>
                     <Image />
                 </ImageWrapper>
-            </ConnectWrapper>
-            <ConnectCircle>LinkedIN</ConnectCircle>
-        </Grid>
+            </MiddleConnectWrapper>
+            <ConnectCircle><p>LinkedIN</p></ConnectCircle>
+        </ConnectWrapper>
     )
 }
 

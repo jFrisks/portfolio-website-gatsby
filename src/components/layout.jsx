@@ -8,14 +8,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components";
+// import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from '@material-ui/styles';
+
+import { Container } from "@material-ui/core";
 
 import Footer from './Footer'
 import Header from "./Header"
 import "./layout.css"
-import { Container } from "@material-ui/core";
 
-import theme from '../styles/theme'
+import muitheme from '../styles/muitheme'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +31,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={muitheme}>
         <>
             <Header siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>

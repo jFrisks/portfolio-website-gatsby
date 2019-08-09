@@ -20,23 +20,14 @@ import bgImage from '../images/Stars-MtCook.jpg'
 
 const Section = styled.div`
     position: relative;
-    background: ${props => `linear-gradient(${props.theme.veryDarkColor50}, ${props.theme.veryDarkColor50}), url(${bgImage})`};
+    background-color: ${props => props.theme.palette.primary.main || 'black'};
+    /* background: ${props => `linear-gradient(${props.theme.veryDarkColor50}, ${props.theme.veryDarkColor50}), url(${bgImage})`}; */
     background-size: cover;
     background-position: bottom;
     z-index: 1000;
 `
 const TextCenter = styled.div`
     text-align: center;
-`
-
-const FullScreenOverlay = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
 `
 
 //components
