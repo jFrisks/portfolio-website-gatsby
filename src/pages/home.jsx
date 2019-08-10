@@ -2,8 +2,9 @@ import React from "react"
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
-import Image from "../components/image"
 import SEO from "../components/seo"
+
+import Image from "../components/image"
 
 import ProjectsPreview from '../components/ProjectsPreview'
 import ConnectPreview from '../components/ConnectPreview.jsx'
@@ -12,41 +13,82 @@ import Layout from '../components/layout'
 import { Typography, Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid'
 
+import Color from 'color'
+import mediaqueries from '../components/mediaqueries'
 
 //assets
 import bgImage from '../images/Stars-MtCook.jpg'
 
 //styled components
+const padding = '5vh';
 
 const Section = styled.div`
+    padding-top: ${padding};
+    padding-bottom: ${padding};
     position: relative;
-    background-color: ${props => props.theme.palette.primary.main || 'black'};
-    /* background: ${props => `linear-gradient(${props.theme.veryDarkColor50}, ${props.theme.veryDarkColor50}), url(${bgImage})`}; */
+`
+
+const HeroSection = styled(Section)`
+    background: ${props => `linear-gradient(${Color(props.theme.palette.primary.dark).alpha(0.5)}, ${Color(props.theme.palette.primary.dark).alpha(0.5)}), url(${bgImage})`};
     background-size: cover;
     background-position: bottom;
-    z-index: 1000;
 `
+const ProjectSection = styled(Section)`
+    background: ${props => `linear-gradient(${props.theme.palette.grey[50]}, ${props.theme.palette.grey[400]})`};
+    padding-top: 250px;
+`
+
+const Lower = styled.div`
+    position: relative;
+    margin: auto;
+    margin-bottom: calc(-200px - 5vh);
+    z-index: 1300;
+`
+
 const TextCenter = styled.div`
     text-align: center;
+`
+const H1 = styled.h1`
+    color: ${props => props.theme.palette.primary.contrastText};
+    font-size: 80pt;
+`
+const H2 = styled.h2`
+    color: ${props => props.theme.palette.secondary.main};
+    font-size: 45pt;
+`
+const H3 = styled.h3`
+    color: ${props => props.theme.palette.text.primary};
+    font-size: 20pt;
+    ${mediaqueries.sm`
+      font-size: 1em;
+   `}
 `
 
 //components
 const HomePage = () => (
     <Layout>
-        <Section>
+
+        <HeroSection>
             <Container>
                 <SEO title="Home" />
                 <TextCenter>
-                    <Typography variant="h3">Creative</Typography>
-                    <Typography variant="h2">Software Engineer</Typography>
-                    <Typography variant="h4">Web Developer - Marketing - Managment</Typography>
+                    <H1>Smart Creative</H1>
+                    <H2>Software Engineer</H2>
+                    <H3>Web Developer - Marketing - Managment</H3>
                 </TextCenter>
 
-                <ConnectPreview />
-                <ProjectsPreview/>
-                <Link to="/page-2/">Go to page 2</Link>
+                <Lower>
+                    <ConnectPreview />
+                </Lower>
             </Container>
-        </Section>
+        </HeroSection>
+
+        <ProjectSection>
+            <Container>
+                <ProjectsPreview />
+            </Container>
+        </ProjectSection>
+
     </Layout>
 )
 

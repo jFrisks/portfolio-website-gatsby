@@ -12,7 +12,7 @@ const LeftSide = styled.div`
   flex: 1;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = (props) => (
   <AppBar position="sticky" color="primary" >
     <Toolbar>
         <LeftSide></LeftSide>

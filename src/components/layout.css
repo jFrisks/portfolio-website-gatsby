@@ -61,6 +61,7 @@ dfn {
   font-style: italic;
 }
 h1 {
+  color: orange;
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -238,6 +239,7 @@ h1 {
   line-height: 1.1;
 }
 h2 {
+  color: orange;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;

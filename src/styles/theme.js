@@ -1,7 +1,7 @@
 export default {
     primary: {
         ligth: "",
-        main: "",
+        main: 'rgba(255, 0, 0, 0.5)',
         dark: "",
         contrast: ""
     },

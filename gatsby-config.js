@@ -14,6 +14,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-theme-material-ui`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
