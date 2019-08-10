@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Chat App",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque risus tortor, malesuada suscipit leo tempus, ullamcorper luctus turpis. Vestibulum dapibus tellus id libero efficitur vestibulum.",
+        "tech": ["Javascript", "Socket.io", "React"],
+        "image": ""
+    },
+    {
+        "id": 2,
+        "title": "Portfolio Website",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque risus tortor, malesuada suscipit leo tempus, ullamcorper luctus turpis. Vestibulum dapibus tellus id libero efficitur vestibulum.",
+        "tech": ["Javascript", "React", "Gatsby"],
+        "image": ""
+    },
+    {
+        "id": 3,
+        "title": "Graph Traversal Visualizer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque risus tortor, malesuada suscipit leo tempus, ullamcorper luctus turpis. Vestibulum dapibus tellus id libero efficitur vestibulum.",
+        "tech": ["Javascript", "React"],
+        "image": ""
+    }
+]

@@ -18,6 +18,7 @@ import mediaqueries from '../components/mediaqueries'
 
 //assets
 import bgImage from '../images/Stars-MtCook.jpg'
+import projects from '../data/projects'
 
 //styled components
 const padding = '5vh';
@@ -42,7 +43,7 @@ const Lower = styled.div`
     position: relative;
     margin: auto;
     margin-bottom: calc(-200px - 5vh);
-    z-index: 1300;
+    z-index: 300;
 `
 
 const TextCenter = styled.div`
@@ -85,7 +86,7 @@ const HomePage = () => (
 
         <ProjectSection>
             <Container>
-                <ProjectsPreview />
+                <ProjectsPreview projects={projects}/>
             </Container>
         </ProjectSection>
 
