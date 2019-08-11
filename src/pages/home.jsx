@@ -10,8 +10,11 @@ import ProjectsPreview from '../components/ProjectsPreview'
 import ConnectPreview from '../components/ConnectPreview.jsx'
 import Layout from '../components/layout'
 
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Box } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
+import GitIcon from 'mdi-material-ui/GithubCircle'
+import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
 
 import Color from 'color'
 import mediaqueries from '../components/mediaqueries'
@@ -21,24 +24,24 @@ import bgImage from '../images/Stars-MtCook.jpg'
 import projects from '../data/projects'
 
 //styled components
-const padding = '5vh';
 
 const Section = styled.div`
-    padding-top: ${padding};
-    padding-bottom: ${padding};
+    padding: ${({theme}) => theme.spacing(8, 2)};
     position: relative;
 `
 
 const HeroSection = styled(Section)`
-    background: ${props => `linear-gradient(${Color(props.theme.palette.primary.dark).alpha(0.5)}, ${Color(props.theme.palette.primary.dark).alpha(0.5)}), url(${bgImage})`};
+    background: ${({theme}) => `linear-gradient(${Color(theme.palette.primary.dark).alpha(0.5)}, ${Color(theme.palette.primary.dark).alpha(0.5)}), url(${bgImage})`};
     background-size: cover;
     background-position: bottom;
 `
 const ProjectSection = styled(Section)`
-    background: ${props => `linear-gradient(${props.theme.palette.grey[50]}, ${props.theme.palette.grey[400]})`};
-    padding-top: 250px;
+    background: ${({theme}) => `linear-gradient(${theme.palette.grey[50]}, ${theme.palette.grey[400]})`};
+    padding-top: 200px;
 `
-
+const ContactCTASection = styled(Section)`
+    background: ${({theme}) => `linear-gradient(${theme.palette.secondary.light}, ${theme.palette.secondary.main}), url(${bgImage})`};
+`
 const Lower = styled.div`
     position: relative;
     margin: auto;
@@ -89,6 +92,39 @@ const HomePage = () => (
                 <ProjectsPreview projects={projects}/>
             </Container>
         </ProjectSection>
+
+        <ContactCTASection>
+            <Container>
+                <TextCenter>
+                    <Typography variant="h3">Connect With Me!</Typography>
+                    <Typography variant="h4">Jonathan Frisk</Typography>
+                </TextCenter>
+                    <Grid
+                        container
+                        justify="center"
+                        spacing={2}
+                    >
+                        <Grid item>
+                            <Button variant="contained" color="primary">
+                                Email me
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button variant="contained" color="primary">
+                                <LinkedinIcon />
+                                Connect on LinkedIn!
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button variant="contained" color="primary">
+                                <GitIcon />
+                                See my GitHub
+                            </Button>
+                        </Grid>
+                    </Grid>
+            </Container>
+            
+        </ContactCTASection>
 
     </Layout>
 )

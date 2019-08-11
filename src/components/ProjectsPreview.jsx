@@ -13,6 +13,8 @@ import Tabs from '@material-ui/core/Tabs'
 import AppBar from '@material-ui/core/AppBar'
 import MediaCard from '../components/MediaCard'
 
+import GitIcon from 'mdi-material-ui/GithubCircle'
+
 const StyledPaper = styled(Paper)`
     padding: ${({theme}) => theme.spacing(3, 2)};
 `
@@ -23,6 +25,7 @@ function ProjectsPreview(props) {
     const mediaCardButtons = (
         <>
             <Button size="small" color="primary">
+                <GitIcon />
                 GIT
             </Button>
             <Button size="small" color="primary">

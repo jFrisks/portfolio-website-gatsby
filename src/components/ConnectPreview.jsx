@@ -5,21 +5,34 @@ import Color from 'color'
 import Image from "../components/image"
 /* <Image src="gatsby-astronaut.png"/> */
 import JonteImage from '../images/jonte2-square.jpg'
+import GitIcon from 'mdi-material-ui/GithubCircle'
+import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
 
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import ButtonBase from '@material-ui/core/ButtonBase'
 
 const ConnectWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `
 
-const Circle = styled.div`
+const IconWrapper = styled.div`
+    display: flex;
+    font-size: 8vw;
+`
+
+const Circle = styled(ButtonBase)`
     display: flex;
     background: ${props => `linear-gradient(${Color(props.theme.palette.secondary.light).alpha(0.2)}, ${Color(props.theme.palette.secondary.main)})`};
     border-radius: 50%;
+    transition: ${({theme}) => theme.transitions.create('all')};
+
+    &:hover {
+        background: ${props => `linear-gradient(${props.theme.palette.secondary.light}, ${props.theme.palette.secondary.main})`};
+    }
 `
 
 const MiddleConnectWrapper = styled(Circle)`
@@ -35,7 +48,7 @@ const ImageWrapper = styled.div`
     margin: auto;
 `
 const ConnectCircle = styled(Circle)`
-    align-self: flex-start;
+    display: flex;
     height: 10vw;
     width: 10vw;
     align-items: center;
@@ -46,13 +59,21 @@ function ConnectGrid(props) {
 
     return (
         <ConnectWrapper>
-            <ConnectCircle><p>GITHUB</p></ConnectCircle>
+            <ConnectCircle>
+                <IconWrapper>
+                    <GitIcon fontSize='inherit' color="primary"/>
+                </IconWrapper>
+            </ConnectCircle>
             <MiddleConnectWrapper>
                 <ImageWrapper>
                     <img src={JonteImage}></img>
                 </ImageWrapper>
             </MiddleConnectWrapper>
-            <ConnectCircle><p>LinkedIN</p></ConnectCircle>
+            <ConnectCircle>
+                <IconWrapper>
+                    <LinkedinIcon fontSize='inherit' color="primary"/>
+                </IconWrapper>
+            </ConnectCircle>
         </ConnectWrapper>
     )
 }

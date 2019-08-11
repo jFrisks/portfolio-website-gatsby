@@ -17,7 +17,7 @@ export default function MediaCard(props) {
                 {data.title}
             </Typography>
             <Typography variant="subtitle1" component="p">
-                {data.tech.join(' ')}
+                {data.tech.join(' • ')}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
                 {data.description}
