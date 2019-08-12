@@ -11,10 +11,12 @@ import ConnectPreview from '../components/ConnectPreview.jsx'
 import Layout from '../components/layout'
 
 import { Typography, Container, Box } from '@material-ui/core';
+import { Section, Item } from '../components/BasicComponents'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import GitIcon from 'mdi-material-ui/GithubCircle'
 import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
+import EmailIcon from 'mdi-material-ui/Email'
 
 import Color from 'color'
 import mediaqueries from '../components/mediaqueries'
@@ -25,10 +27,7 @@ import projects from '../data/projects'
 
 //styled components
 
-const Section = styled.div`
-    padding: ${({theme}) => theme.spacing(8, 2)};
-    position: relative;
-`
+
 
 const HeroSection = styled(Section)`
     background: ${({theme}) => `linear-gradient(${Color(theme.palette.primary.dark).alpha(0.5)}, ${Color(theme.palette.primary.dark).alpha(0.5)}), url(${bgImage})`};
@@ -49,7 +48,7 @@ const Lower = styled.div`
     z-index: 300;
 `
 
-const TextCenter = styled.div`
+const TextCenter = styled(Item)`
     text-align: center;
 `
 const H1 = styled.h1`
@@ -67,6 +66,11 @@ const H3 = styled.h3`
       font-size: 1em;
    `}
 `
+const linkGit = 'https://github.com/jFrisks'
+const linkLinkedin = 'https://www.linkedin.com/in/jonathanfrisk/'
+const myEmail = 'frisk.jonte@gmail.com'
+const openNewTab = (link) => window.open(link,'_blank', 'noreferrer')
+const openLink = (link) => window.open(link, 'noreferrer')
 
 //components
 const HomePage = () => (
@@ -105,18 +109,19 @@ const HomePage = () => (
                         spacing={2}
                     >
                         <Grid item>
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" color="primary" onClick={() => openLink('mailto:'+myEmail)}>
+                                <EmailIcon />
                                 Email me
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" color="primary" onClick={() => openNewTab(linkLinkedin)}>
                                 <LinkedinIcon />
                                 Connect on LinkedIn!
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" color="primary" onClick={() => openNewTab(linkGit)}>
                                 <GitIcon />
                                 See my GitHub
                             </Button>

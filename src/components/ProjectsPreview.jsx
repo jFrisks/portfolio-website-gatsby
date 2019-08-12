@@ -14,6 +14,7 @@ import AppBar from '@material-ui/core/AppBar'
 import MediaCard from '../components/MediaCard'
 
 import GitIcon from 'mdi-material-ui/GithubCircle'
+import { Item } from "./BasicComponents";
 
 const StyledPaper = styled(Paper)`
     padding: ${({theme}) => theme.spacing(3, 2)};
@@ -37,30 +38,37 @@ function ProjectsPreview(props) {
     return (
         <>
             <Box textAlign="center">
-                <Typography variant="h3">Projects</Typography>
-                <Typography variant="h5" component="h4">My Portfolio</Typography>
-                <ButtonGroup
-                variant="contained"
-                color="secondary"
-                size="large"
-                aria-label="large contained secondary button group"
-                >
-                    <Button>Programming</Button>
-                    <Button>Marketing / Design</Button>
-                    <Button>Leadership</Button>
-                </ButtonGroup>
-                <Grid
-                    container
-                    justify="center"
-                    alignItems="stretch"
-                    spacing={2}
-                >
-                    {projects.map(project => (
-                        <Grid item xs={12} sm={6} md={3} >
-                            <MediaCard data={project} buttons={mediaCardButtons}/>
-                        </Grid>
-                    ))}
-                </Grid>
+                <Item>
+                    <Typography variant="h3">Projects</Typography>
+                    <Typography variant="h5" component="h4">My Portfolio</Typography>
+                </Item>
+                <Item>
+                    <ButtonGroup
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    aria-label="large contained secondary button group"
+                    >
+                        <Button>Programming</Button>
+                        <Button>Marketing / Design</Button>
+                        <Button>Leadership</Button>
+                    </ButtonGroup>
+                </Item>
+                <Item>
+                    <Grid
+                        container
+                        justify="center"
+                        alignItems="stretch"
+                        spacing={2}
+                    >
+                        {projects.map(project => (
+                            <Grid item xs={12} sm={6} md={3} >
+                                <MediaCard data={project} buttons={mediaCardButtons}/>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Item>
+                
             </Box>
         </>
     )

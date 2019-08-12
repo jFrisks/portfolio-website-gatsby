@@ -3,13 +3,14 @@ import styled from 'styled-components'
 //import PropTypes from "prop-types"
 
 //Libraries
-
+import { Container } from "@material-ui/core";
+import Link from '@material-ui/core/Link'
 //My Components
 
 //Assets
 import GitHubIcon from 'mdi-material-ui/GithubCircle'
 import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
-import { Container } from "@material-ui/core";
+import EmailIcon from 'mdi-material-ui/Email'
 
 const FooterWrapper = styled.footer`
     padding: ${({theme}) => theme.spacing(8, 0)};
@@ -40,8 +41,15 @@ const Footer = () => (
                 </Item>
                 <Item>
                     <IconWrap>
-                        <GitHubIcon fontSize="inherit" color="secondary"/>
-                        <LinkedinIcon fontSize="inherit" color="secondary"/>
+                        <Link href="https://github.com/jFrisks" target="_blank" rel="noreferrer">
+                            <GitHubIcon fontSize="inherit" color="secondary"/>
+                        </Link>
+                        <Link href="https://linkedin.com/in/jonathanfrisk/" target="_blank" rel="noreferrer">
+                            <LinkedinIcon fontSize="inherit" color="secondary"/>
+                        </Link>
+                        <Link href="mailto:frisk.jonte@gmail.com">
+                            <EmailIcon fontSize="inherit" color="secondary"/>
+                        </Link>
                     </IconWrap>
                 </Item>
             </Grid>

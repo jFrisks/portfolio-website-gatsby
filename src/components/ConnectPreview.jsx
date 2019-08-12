@@ -56,10 +56,13 @@ const ConnectCircle = styled(Circle)`
 `
 
 function ConnectGrid(props) {
+    const linkGit = 'https://github.com/jFrisks'
+    const linkLinkedin = 'https://www.linkedin.com/in/jonathanfrisk/'
+    const openNewTab = (link) => window.open(link,'_blank', 'noreferrer')
 
     return (
         <ConnectWrapper>
-            <ConnectCircle>
+            <ConnectCircle onClick={() => openNewTab(linkGit)}>
                 <IconWrapper>
                     <GitIcon fontSize='inherit' color="primary"/>
                 </IconWrapper>
@@ -69,7 +72,7 @@ function ConnectGrid(props) {
                     <img src={JonteImage}></img>
                 </ImageWrapper>
             </MiddleConnectWrapper>
-            <ConnectCircle>
+            <ConnectCircle onClick={() => openNewTab(linkLinkedin)}>
                 <IconWrapper>
                     <LinkedinIcon fontSize='inherit' color="primary"/>
                 </IconWrapper>
