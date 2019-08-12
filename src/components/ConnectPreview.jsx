@@ -41,11 +41,13 @@ const MiddleConnectWrapper = styled(Circle)`
     height: 60vw;
     max-width: 400px;
     max-height: 400px;
+    overflow: hidden;
 `
 const ImageWrapper = styled.div`
-    height: 60%;
-    width: 60%;
+    height: 85%;
+    width: 85%;
     margin: auto;
+    margin-top: 50px;
 `
 const ConnectCircle = styled(Circle)`
     display: flex;
@@ -69,7 +71,7 @@ function ConnectGrid(props) {
             </ConnectCircle>
             <MiddleConnectWrapper>
                 <ImageWrapper>
-                    <img src={JonteImage}></img>
+                    <Image />
                 </ImageWrapper>
             </MiddleConnectWrapper>
             <ConnectCircle onClick={() => openNewTab(linkLinkedin)}>

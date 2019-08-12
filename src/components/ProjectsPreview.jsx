@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Color from 'color'
 import {Link} from 'gatsby'
 
 import Image from "../components/image"
@@ -17,23 +18,55 @@ import GitIcon from 'mdi-material-ui/GithubCircle'
 import { Item } from "./BasicComponents";
 
 const StyledPaper = styled(Paper)`
-    padding: ${({theme}) => theme.spacing(3, 2)};
+    &.MuiPaper-root {
+        background: rgba(0, 0, 0, 0.1);
+    }
 `
 
-function ProjectsPreview(props) {
-    const {projects, ...rest} = props;
+function ProjectsTab(props) {
+    const {children, index, value, projects, ...other} = props;
+    const openNewTab = (link) => window.open(link,'_blank', 'noreferrer')
 
-    const mediaCardButtons = (
+    const mediaCardButtons = (sourceSrc, demoSrc) => (
         <>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" onClick={() => openNewTab(sourceSrc)}>
                 <GitIcon />
                 GIT
             </Button>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" onClick={() => openNewTab(demoSrc)}>
                 Demo
             </Button>
         </>
-    );
+    )
+
+    return (
+        <StyledPaper
+            hidden={value !== index}
+        >
+            <Grid
+                container
+                justify="center"
+                alignItems="stretch"
+                spacing={2}
+            >
+                {projects.map(project => (
+                    <Grid item xs={12} sm={6} md={3} >
+                        <MediaCard data={project} buttons={mediaCardButtons(project.source, project.demo)}/>
+                    </Grid>
+                ))}
+            </Grid>
+        </StyledPaper>
+    )
+}
+
+
+function ProjectsPreview(props) {
+    const {projects, ...rest} = props;
+    const [value, setValue] = React.useState(0);
+    
+    function handleClick(value) {
+        setValue(value);
+    }
 
     return (
         <>
@@ -49,24 +82,14 @@ function ProjectsPreview(props) {
                     size="large"
                     aria-label="large contained secondary button group"
                     >
-                        <Button>Programming</Button>
-                        <Button>Marketing / Design</Button>
-                        <Button>Leadership</Button>
+                        <Button onClick={() => handleClick(0)}>Programming</Button>
+                        <Button onClick={() => handleClick(1)}>Marketing / Design</Button>
+                        <Button onClick={() => handleClick(2)}>Leadership</Button>
                     </ButtonGroup>
                 </Item>
                 <Item>
-                    <Grid
-                        container
-                        justify="center"
-                        alignItems="stretch"
-                        spacing={2}
-                    >
-                        {projects.map(project => (
-                            <Grid item xs={12} sm={6} md={3} >
-                                <MediaCard data={project} buttons={mediaCardButtons}/>
-                            </Grid>
-                        ))}
-                    </Grid>
+                    <ProjectsTab index={0} value={value} projects={projects.programming} />
+                    <ProjectsTab index={2} value={value} projects={projects.leadership} />
                 </Item>
                 
             </Box>

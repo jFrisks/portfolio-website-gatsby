@@ -54,16 +54,22 @@ const TextCenter = styled(Item)`
 const H1 = styled.h1`
     color: ${props => props.theme.palette.primary.contrastText};
     font-size: 80pt;
+    ${mediaqueries.sm`
+      font-size: 70pt;
+   `}
 `
 const H2 = styled.h2`
     color: ${props => props.theme.palette.secondary.main};
     font-size: 45pt;
+    ${mediaqueries.sm`
+      font-size: 30pt;
+   `}
 `
 const H3 = styled.h3`
     color: ${props => props.theme.palette.text.primary};
     font-size: 20pt;
     ${mediaqueries.sm`
-      font-size: 1em;
+      font-size: 12pt;
    `}
 `
 const linkGit = 'https://github.com/jFrisks'
