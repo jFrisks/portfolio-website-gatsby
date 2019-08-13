@@ -8,10 +8,6 @@ export default function MediaCard(props) {
     return (
         <Card>
         <CardActionArea>
-            <CardMedia
-            image={data.image}
-            title={data.title}
-            />
             <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
                 {data.title}
@@ -38,6 +34,8 @@ MediaCard.propTypes = {
         description: PropTypes.string,
         tech: PropTypes.arrayOf(PropTypes.string),
         image: PropTypes.node,
+        demo: PropTypes.string,
+        source: PropTypes.string
     }),
     buttons: PropTypes.element
 }

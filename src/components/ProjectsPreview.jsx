@@ -50,8 +50,8 @@ function ProjectsTab(props) {
                 spacing={2}
             >
                 {projects.map(project => (
-                    <Grid item xs={12} sm={6} md={3} >
-                        <MediaCard data={project} buttons={mediaCardButtons(project.source, project.demo)}/>
+                    <Grid key={project.id} item xs={12} sm={6} md={3} >
+                        <MediaCard key={project.id} data={project} buttons={mediaCardButtons(project.source, project.demo)}/>
                     </Grid>
                 ))}
             </Grid>
@@ -88,8 +88,8 @@ function ProjectsPreview(props) {
                     </ButtonGroup>
                 </Item>
                 <Item>
-                    <ProjectsTab index={0} value={value} projects={projects.programming} />
-                    <ProjectsTab index={2} value={value} projects={projects.leadership} />
+                    <ProjectsTab key={1} index={0} value={value} projects={projects.programming} />
+                    <ProjectsTab key={2} index={2} value={value} projects={projects.leadership} />
                 </Item>
                 
             </Box>
