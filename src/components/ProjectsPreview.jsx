@@ -16,12 +16,31 @@ import MediaCard from '../components/MediaCard'
 
 import GitIcon from 'mdi-material-ui/GithubCircle'
 import { Item } from "./BasicComponents";
+import ImageGridList from "./ImageGridList";
+
+const ScrollableBox = styled.div`
+    overflow: scroll;
+    max-height: ${({height}) => height};
+`
 
 const StyledPaper = styled(Paper)`
+    padding: ${({theme}) => theme.spacing(2, 2)};
     &.MuiPaper-root {
         background: rgba(0, 0, 0, 0.1);
     }
 `
+function Panel(props) {
+    const { hidden, children } = props;
+
+    return (
+        <StyledPaper
+            hidden={hidden}
+        >
+            {children}
+        </StyledPaper>
+    )
+}
+
 
 function ProjectsTab(props) {
     const {children, index, value, projects, ...other} = props;
@@ -40,7 +59,7 @@ function ProjectsTab(props) {
     )
 
     return (
-        <StyledPaper
+        <Panel
             hidden={value !== index}
         >
             <Grid
@@ -55,10 +74,19 @@ function ProjectsTab(props) {
                     </Grid>
                 ))}
             </Grid>
-        </StyledPaper>
+        </Panel>
     )
 }
 
+function ImageTab(props) {
+    const {children, index, value, projects, ...other} = props;
+
+    return (
+        <Panel hidden={value !== index} >
+            <ImageGridList projects={projects}/>
+        </Panel>
+    )
+}
 
 function ProjectsPreview(props) {
     const {projects, ...rest} = props;
@@ -88,7 +116,10 @@ function ProjectsPreview(props) {
                     </ButtonGroup>
                 </Item>
                 <Item>
-                    <ProjectsTab key={1} index={0} value={value} projects={projects.programming} />
+                    <ProjectsTab key={0} index={0} value={value} projects={projects.programming} />
+                    <ScrollableBox height='50vh'>
+                        <ImageTab key={1} index={1} value={value} projects={projects.marketing} />
+                    </ScrollableBox>
                     <ProjectsTab key={2} index={2} value={value} projects={projects.leadership} />
                 </Item>
                 
