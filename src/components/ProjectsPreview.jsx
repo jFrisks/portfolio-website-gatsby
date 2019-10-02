@@ -111,15 +111,11 @@ function ProjectsPreview(props) {
                     aria-label="large contained secondary button group"
                     >
                         <Button onClick={() => handleClick(0)}>Programming</Button>
-                        <Button onClick={() => handleClick(1)}>Marketing / Design</Button>
                         <Button onClick={() => handleClick(2)}>Leadership</Button>
                     </ButtonGroup>
                 </Item>
                 <Item>
                     <ProjectsTab key={0} index={0} value={value} projects={projects.programming} />
-                    <ScrollableBox height='50vh'>
-                        <ImageTab key={1} index={1} value={value} projects={projects.marketing} />
-                    </ScrollableBox>
                     <ProjectsTab key={2} index={2} value={value} projects={projects.leadership} />
                 </Item>
                 
