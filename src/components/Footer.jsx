@@ -20,7 +20,7 @@ const FooterWrapper = styled.footer`
 
 const Grid = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 `
@@ -30,6 +30,7 @@ const IconWrap = styled.div`
 `
 
 const Item = styled.div`
+    text-align: center;
 `
 
 const Footer = () => (

@@ -17,11 +17,6 @@ const Header = (props) => (
     <Toolbar>
         <LeftSide></LeftSide>
         <Button component={Link} to="/" color="inherit">Home</Button>
-        <Button component={Link} to="/page-2" color="inherit" href="">Page 2</Button>
-        <Button component={Link} to="/projects" color="inherit">Projects</Button>
-        <Button component={Link} to="/resume" color="inherit">Resume</Button>
-        <Button component={Link} to="/blog" color="inherit">Blog</Button>
-        <Button component={Link} to="/contact" color="inherit">Contact</Button>
     </Toolbar>
   </AppBar>
 )

@@ -44,7 +44,7 @@ const ContactCTASection = styled(Section)`
 const Lower = styled.div`
     position: relative;
     margin: auto;
-    margin-bottom: calc(-200px - 5vh);
+    margin-bottom: calc(-200px - 5vw);
     z-index: 300;
 `
 
@@ -55,14 +55,14 @@ const H1 = styled.h1`
     color: ${props => props.theme.palette.primary.contrastText};
     font-size: 80pt;
     ${mediaqueries.sm`
-      font-size: 70pt;
+      font-size: 50pt;
    `}
 `
 const H2 = styled.h2`
     color: ${props => props.theme.palette.secondary.main};
     font-size: 45pt;
     ${mediaqueries.sm`
-      font-size: 30pt;
+      font-size: 20pt;
    `}
 `
 const H3 = styled.h3`
