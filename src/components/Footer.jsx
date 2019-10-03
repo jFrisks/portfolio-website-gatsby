@@ -3,7 +3,7 @@ import styled from 'styled-components'
 //import PropTypes from "prop-types"
 
 //Libraries
-import { Container } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import Link from '@material-ui/core/Link'
 //My Components
 
@@ -38,7 +38,7 @@ const Footer = () => (
         <Container>
             <Grid>
                 <Item>
-                    © {new Date().getFullYear()}, Built by Jonathan Frisk with React and Gatsby
+                    <Typography variant="subtitle2" color="secondary">© {new Date().getFullYear()}, Built by Jonathan Frisk with React and Gatsby</Typography>
                 </Item>
                 <Item>
                     <IconWrap>

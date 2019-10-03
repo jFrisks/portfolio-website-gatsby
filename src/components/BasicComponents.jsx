@@ -7,6 +7,7 @@ const Section = styled.div`
 `
 const Item = styled.div`
     margin: ${({theme}) => theme.spacing(4, 2)};
+    justify-items: center;
 `
 
 export {
