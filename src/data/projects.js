@@ -1,6 +1,3 @@
-import Img1 from '../images/EVENTKLUBB3_Remember-Cover-VT19-copy.png'
-import Img2 from '../images/FullMoon_Affisch_VT19.png'
-
 export default {
     marketing: [
         {
@@ -8,7 +5,7 @@ export default {
             title: "Marketing",
             description: "",
             tech: [],
-            image: Img1,
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
             demo: "https://github.com/jFrisks",
             source: "https://github.com/jFrisks"
         },
@@ -17,7 +14,7 @@ export default {
             title: "Marketing",
             description: "",
             tech: [],
-            image: Img2,
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
             demo: "https://github.com/jFrisks",
             source: "https://github.com/jFrisks"
         },
@@ -26,7 +23,7 @@ export default {
             title: "Marketing",
             description: "",
             tech: [],
-            image: Img2,
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
             demo: "https://github.com/jFrisks",
             source: "https://github.com/jFrisks"
         },
@@ -35,7 +32,7 @@ export default {
             title: "Marketing",
             description: "",
             tech: [],
-            image: Img1,
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
             demo: "https://github.com/jFrisks",
             source: "https://github.com/jFrisks"
         }

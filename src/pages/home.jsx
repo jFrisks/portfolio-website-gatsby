@@ -81,9 +81,9 @@ const openLink = (link) => window.open(link, 'noreferrer')
 //components
 const HomePage = () => (
     <Layout>
+        <SEO title="Home" />
         <HeroSection>
             <Container>
-                <SEO title="Home" />
                 <TextCenter>
                     <H1>Smart Creative</H1>
                     <H2>Software Engineer</H2>
