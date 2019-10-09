@@ -44,11 +44,19 @@ const ContactCTASection = styled(Section)`
 const Lower = styled.div`
     position: relative;
     margin: auto;
-    margin-bottom: calc(-200px - 5vw);
+    margin-bottom: calc(-200px - 5vh);
     z-index: 300;
+
+    ${mediaqueries.sm`
+      margin-bottom: calc(-200px + 2vh);
+   `}
 `
 
 const TextCenter = styled(Item)`
+    text-align: center;
+`
+const TextCenterWithPadding = styled(Item)`
+    padding: 7vh 0;
     text-align: center;
 `
 const H1 = styled.h1`
@@ -84,11 +92,11 @@ const HomePage = () => (
         <SEO title="Home" />
         <HeroSection>
             <Container>
-                <TextCenter>
+                <TextCenterWithPadding>
                     <H1>Smart Creative</H1>
                     <H2>Software Engineer</H2>
                     <H3>Web Developer - Marketing - Managment</H3>
-                </TextCenter>
+                </TextCenterWithPadding>
 
                 <Lower>
                     <ConnectPreview />

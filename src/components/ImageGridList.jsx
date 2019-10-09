@@ -7,21 +7,27 @@ import GeneralImage from '../components/GeneralImage'
 export default function ImageGridList(props) {
     const { projects } = props;
     const maxCols = 6
-    const [colwidth, setColwidth] = useState(1);
+    let colWidth = 0;
 
     function calculateColSize(index) {
-      const mod = index % maxCols
-      if(mod === 0) setColwidth(colwidth+1)
-      return colwidth
+      const mod = index % (maxCols / colWidth)
+      if(mod === 0){
+        if(colWidth >= maxCols / 2) colWidth = 1
+        else colWidth += 1
+      }
+      return colWidth
     }
 
     return (
         <GridList cellHeight={250} cols={maxCols}>
-          {projects.map((tile, index) => (
-            <GridListTile key={tile.image} cols={1}>
-              <GeneralImage imgName={tile.image} alt={tile.title} />
-            </GridListTile>
-          ))}
+          {projects.map((tile, index) => {
+            const cols = calculateColSize(index);
+            return(
+              <GridListTile key={tile.image} cols={cols}>
+                <GeneralImage imgName={tile.image} alt={tile.title} />
+              </GridListTile>
+            )
+          })}
         </GridList>
     );
   }

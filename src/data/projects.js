@@ -1,7 +1,7 @@
 export default {
     marketing: [
         {
-            id: "img-112413525",
+            id: "img-112013525",
             title: "Marketing",
             description: "",
             tech: [],
@@ -10,7 +10,7 @@ export default {
             source: "https://github.com/jFrisks"
         },
         {
-            id: "img-1124123423553525",
+            id: "img-1124123823553525",
             title: "Marketing",
             description: "",
             tech: [],
@@ -19,7 +19,7 @@ export default {
             source: "https://github.com/jFrisks"
         },
         {
-            id: "img-112e44142450525",
+            id: "img-112e44142470525",
             title: "Marketing",
             description: "",
             tech: [],
@@ -28,7 +28,7 @@ export default {
             source: "https://github.com/jFrisks"
         },
         {
-            id: "img-1124121331fere3423553525",
+            id: "img-1124121331f2re3423553525",
             title: "Marketing",
             description: "",
             tech: [],
@@ -38,6 +38,60 @@ export default {
         },
         {
             id: "img-1124121331fere342355325625",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-1124145331f2re3423553525",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-1124121941fery34762355325625",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-1124121331f2re2523423553525",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-1124133341fere342355325625",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-11241453vcbdfb31f2re34253525",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-11241219412646fery3425325625",
             title: "Marketing",
             description: "",
             tech: [],
