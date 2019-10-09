@@ -1,32 +1,39 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
+import { StaticQuery, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const GeneralImage = ({ imgName }) => (
-    <StaticQuery
-      query={graphql`
-        query {
-          allImageSharp {
-            edges {
-              node {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                  originalName
-                }
-              }
+const StyledImage = styled(Img)`
+  height: 100%;
+  object-fit: cover;
+`
+
+const GeneralImage = ({ imgName }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allImageSharp {
+        edges {
+          node {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+              originalName
             }
           }
         }
-      `}
-      render={data => {
-        const image = data.allImageSharp.edges.find(
-          edge => edge.node.fluid.originalName === imgName
-        )
-        if (!image) {
-          return null
-        }
-        return <Img fluid={image.node.fluid} />
-      }}
-    />
+      }
+    }
+  `)
+
+  const image = data.allImageSharp.edges.find(
+    edge => edge.node.fluid.originalName === imgName
   )
-  export default GeneralImage
+  if (!image) {
+    return null
+  }
+
+  return (
+    <StyledImage fluid={image.node.fluid} />
+  )
+}
+
+export default GeneralImage

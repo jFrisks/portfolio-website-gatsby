@@ -98,7 +98,7 @@ function ProjectsPreview(props) {
 
     return (
         <>
-            <Box display="flex" textAlign="center" justifyContent="center" alignItems="center" flexDirection="column">
+            <Box display="flex" textAlign="center" justifyContent="space-between" alignItems="space-between" flexDirection="column">
                 <Item>
                     <Typography variant="h3">Projects</Typography>
                     <Typography variant="h5" component="h4">My Portfolio</Typography>

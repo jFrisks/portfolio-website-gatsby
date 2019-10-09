@@ -35,6 +35,15 @@ export default {
             image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
             demo: "https://github.com/jFrisks",
             source: "https://github.com/jFrisks"
+        },
+        {
+            id: "img-1124121331fere342355325625",
+            title: "Marketing",
+            description: "",
+            tech: [],
+            image: 'EVENTKLUBB3_Remember-Cover-VT19-copy.png',
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
         }
     ],
     programming: [
