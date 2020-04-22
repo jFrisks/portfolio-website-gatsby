@@ -23,7 +23,7 @@ export default function ImageGridList(props) {
           {projects.map((tile, index) => {
             const cols = calculateColSize(index);
             return(
-              <GridListTile key={tile.image} cols={cols}>
+              <GridListTile key={tile.id} cols={cols}>
                 <GeneralImage imgName={tile.image} alt={tile.title} />
               </GridListTile>
             )
