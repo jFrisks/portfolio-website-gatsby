@@ -102,13 +102,22 @@ export default {
     ],
     programming: [
         {
+            id: 4,
+            title: "Intranet for 300 person company",
+            description: "Developed intranet for 300 person company with two person team. Ruby on Rails and PostgreSQL. Developed database Implemented calendar, document database, news with comments, data filtering and search with SQL queries. Also Connected with Microsoft Graph API for various S harepoint integration. Awarded with employer of the month",
+            tech: ["Ruby On Rails", "Ruby", "postgreSQL", "Microsfot Graph API", "Sharepoint"],
+            image: "",
+            demo: "https://jfrisks.github.io/socket-react-chat-app/",
+            source: "https://github.com/jFrisks/socket-react-chat-app"
+        },
+        {
             id: 1,
             title: "Websocket Chat App",
             description: "Created fullstack chatapp with backend and front end. Used websocket to interact with my coded server that stores and handles chatroms and available users. First time using react, node and socket.io during this project.",
             tech: ["Javascript", "React", "Node", "Socket.io"],
             image: "",
-            demo: "https://jfrisks.github.io/socket-react-chat-app/",
-            source: "https://github.com/jFrisks/socket-react-chat-app"
+            demo: "https://github.com/jFrisks",
+            source: "https://github.com/jFrisks"
         },
         {
             id: 2,
@@ -118,6 +127,15 @@ export default {
             image: "",
             demo: "https://jfrisks.github.io/graph-traversal-visualizer/",
             source: "https://github.com/jFrisks/graph-traversal-visualizer"
+        },
+        {
+            id: 5,
+            title: "Real Estate Image History API + Chrome Extension",
+            description: "An API for scraping and collecting real estate images hosted on a server. Also a Chrome extension that automatically saves history of real estate from websites. Keep track of sold properties and view images and details of real estate, even when sold.",
+            tech: ["Javascript", "Chrome Extension", "Hemnet"],
+            image: "",
+            demo: "https://chrome.google.com/webstore/detail/mclndpdogncpmdahpdglcfmhcknijldk/publish-accepted?authuser=1&hl=sv",
+            source: "https://github.com/jFrisks/real-estate-history"
         },
         {
             id: 3,
@@ -151,7 +169,7 @@ export default {
         {
             id: 6,
             title: "Youth Camp Leader",
-            description: "For one of Sweden's most popular summer confirmation camps, in Åre. 2 weeks a 7 times with 45 teenagers and 15 leaders. Built group dynamics with various social activites. Also handled everything from suicidal attempts and relatives passing away to bone fractures and bullying.",
+            description: "For one of Sweden's most popular summer confirmation camps, in Åre, Sweden. 2 weeks a 7 times with 45 teenagers and 15 leaders. Built group dynamics with various social activites. Also handled everything from suicidal attempts and relatives passing away to bone fractures and bullying.",
             tech: ["Youth Camp"],
             image: "",
             demo: "https://github.com/jFrisks",

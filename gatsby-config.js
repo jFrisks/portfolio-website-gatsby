@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Jonathan Frisk - jFrisks Portfolio`,
     description: `Software Engineer and a smart creativite with a "can do" attitude. Third year MsC Student in Computer Science at Lund University. Java engineer. Fullstack web developer in Javascript and React, with expereince in MongoDB, Gatsby, Socekt.IO`,
+    url: "https://www.jonathanfrisk.com",
     author: `@jfrisks`,
   },
   plugins: [

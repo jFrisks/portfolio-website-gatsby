@@ -23,6 +23,7 @@ import mediaqueries from '../components/mediaqueries'
 
 //assets
 import bgImage from '../images/Stars-MtCook.jpg'
+import profileImage from '../images/jonte2-square.jpg'
 import projects from '../data/projects'
 
 //styled components
@@ -89,7 +90,11 @@ const openLink = (link) => window.open(link, 'noreferrer')
 //components
 const HomePage = () => (
     <Layout>
-        <SEO title="Home" />
+        <SEO
+            title="Home"
+            description="Jonathan Frisk is a MsC student in Computer Science at Lund University. Junior Software Engineer. Java, Javascript, Node, React, Python, MongoDB. Full Stack"
+            image={profileImage}
+        />
         <HeroSection>
             <Container>
                 <TextCenterWithPadding>
