@@ -14,8 +14,8 @@ import { Typography, Container, Box } from '@material-ui/core';
 import { Section, Item } from '../components/BasicComponents'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import GitIcon from 'mdi-material-ui/GithubCircle'
-import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
+import GitIcon from 'mdi-material-ui/Github'
+import LinkedinIcon from 'mdi-material-ui/Linkedin'
 import EmailIcon from 'mdi-material-ui/Email'
 
 import Color from 'color'

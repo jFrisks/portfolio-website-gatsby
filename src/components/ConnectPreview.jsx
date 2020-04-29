@@ -5,8 +5,8 @@ import Color from 'color'
 import Image from "../components/image"
 /* <Image src="gatsby-astronaut.png"/> */
 import JonteImage from '../images/jonte2-square.jpg'
-import GitIcon from 'mdi-material-ui/GithubCircle'
-import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
+import GitIcon from 'mdi-material-ui/Github'
+import LinkedinIcon from 'mdi-material-ui/Linkedin'
 
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'

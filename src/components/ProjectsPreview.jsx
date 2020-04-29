@@ -14,7 +14,7 @@ import Tabs from '@material-ui/core/Tabs'
 import AppBar from '@material-ui/core/AppBar'
 import MediaCard from '../components/MediaCard'
 
-import GitIcon from 'mdi-material-ui/GithubCircle'
+import GitIcon from 'mdi-material-ui/Github'
 import { Item } from "./BasicComponents";
 import ImageGridList from "./ImageGridList";
 

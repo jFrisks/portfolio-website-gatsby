@@ -8,8 +8,8 @@ import Link from '@material-ui/core/Link'
 //My Components
 
 //Assets
-import GitHubIcon from 'mdi-material-ui/GithubCircle'
-import LinkedinIcon from 'mdi-material-ui/LinkedinBox'
+import GitHubIcon from 'mdi-material-ui/Github'
+import LinkedinIcon from 'mdi-material-ui/Linkedin'
 import EmailIcon from 'mdi-material-ui/Email'
 
 const FooterWrapper = styled.footer`
