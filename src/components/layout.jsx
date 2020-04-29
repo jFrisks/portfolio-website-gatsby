@@ -17,7 +17,7 @@ import Footer from './Footer'
 import Header from "./Header"
 import "./layout.css"
 
-import muitheme from '../gatsby-theme-material-ui/theme'
+import muitheme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
