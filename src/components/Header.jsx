@@ -16,6 +16,7 @@ const Header = (props) => (
   <AppBar position="sticky" color="primary" >
     <Toolbar>
         <LeftSide></LeftSide>
+        <Button component={Link} to="https://drive.google.com/file/d/1--9ulvZzIuwv3oPswJa1rRY5pk8Ultnj/view?usp=sharing" color="inherit">Resume</Button>
         <Button component={Link} to="/" color="inherit">Home</Button>
     </Toolbar>
   </AppBar>

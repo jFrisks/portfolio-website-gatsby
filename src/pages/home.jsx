@@ -17,6 +17,7 @@ import Button from '@material-ui/core/Button'
 import GitIcon from 'mdi-material-ui/Github'
 import LinkedinIcon from 'mdi-material-ui/Linkedin'
 import EmailIcon from 'mdi-material-ui/Email'
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 import Color from 'color'
 import mediaqueries from '../components/mediaqueries'
@@ -37,11 +38,15 @@ const HeroSection = styled(Section)`
 `
 const ProjectSection = styled(Section)`
     background: ${({theme}) => `linear-gradient(${theme.palette.grey[50]}, ${theme.palette.grey[400]})`};
-    padding-top: 200px;
+    padding-top: calc(200px - 7vh);
 `
 const ContactCTASection = styled(Section)`
     background: ${({theme}) => `linear-gradient(${theme.palette.secondary.light}, ${theme.palette.secondary.main}), url(${bgImage})`};
-`
+    `
+const ValuesSection = styled(Section)`
+    background: ${({theme}) => `linear-gradient(${theme.palette.primary.light}, ${theme.palette.primary.main})`};
+`;
+
 const Lower = styled.div`
     position: relative;
     margin: auto;
@@ -57,7 +62,7 @@ const TextCenter = styled(Item)`
     text-align: center;
 `
 const TextCenterWithPadding = styled(Item)`
-    padding: 7vh 0;
+    padding: 1vh 0;
     text-align: center;
 `
 const H1 = styled.h1`
@@ -75,12 +80,13 @@ const H2 = styled.h2`
    `}
 `
 const H3 = styled.h3`
-    color: ${props => props.theme.palette.text.primary};
+    color: ${props => props.theme.palette.grey[200]};
     font-size: 20pt;
     ${mediaqueries.sm`
       font-size: 12pt;
    `}
 `
+
 const linkGit = 'https://github.com/jFrisks'
 const linkLinkedin = 'https://www.linkedin.com/in/jonathanfrisk/'
 const myEmail = 'frisk.jonte@gmail.com'
@@ -96,27 +102,43 @@ const HomePage = () => (
             image={profileImage}
         />
         <HeroSection>
-            <Container>
                 <TextCenterWithPadding>
-                    <H1>Smart Creative</H1>
+                    <H1>Jonathan Frisk</H1>
                     <H2>Software Engineer</H2>
-                    <H3>Web Developer - Marketing - Managment</H3>
+                    <H3>Backend | Full Stack</H3>
                 </TextCenterWithPadding>
 
                 <Lower>
                     <ConnectPreview />
                 </Lower>
-            </Container>
         </HeroSection>
 
         <ProjectSection>
-            <Container>
-                <ProjectsPreview projects={projects}/>
-            </Container>
+                <TextCenterWithPadding>
+                    <Typography variant="body1" component="p">
+                        Howdy, thanks for checking out my profile!
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        I am an aspiring Backend / Full Stack engineer with an “Anything is possible”-mindset. June 2022 Graduate.
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        I want to be challenged! Therefore, looking for companies and people with the same high ambitions and engagement.
+                    </Typography>
+                </TextCenterWithPadding>
+
+                <TextCenterWithPadding>
+                    <Typography paragraph="true" variant="h4">Work Experience</Typography>
+                    <Button variant="contained" color="secondary" onClick={() => openLink("https://drive.google.com/file/d/1--9ulvZzIuwv3oPswJa1rRY5pk8Ultnj/view?usp=sharing")}>
+                        <AssignmentIcon />
+                        View Resume
+                    </Button>
+                </TextCenterWithPadding>
+    
+                {/**<ProjectsPreview projects={projects}/> */}
         </ProjectSection>
 
+    
         <ContactCTASection>
-            <Container>
                 <TextCenter>
                     <Typography variant="h3">Connect With Me!</Typography>
                     <Typography variant="h4">Jonathan Frisk</Typography>
@@ -145,10 +167,29 @@ const HomePage = () => (
                             </Button>
                         </Grid>
                     </Grid>
-            </Container>
             
         </ContactCTASection>
 
+        <ValuesSection>
+            <TextCenterWithPadding>
+                <Typography paragraph="true" variant="h5" color="secondary">Values</Typography>
+                <Typography variant="body1" component="p" color="secondary">
+                    Team player.
+                </Typography>
+                <Typography variant="body1" component="p" color="secondary">
+                    Work with end user.
+                </Typography>
+                <Typography variant="body1" component="p" color="secondary">
+                    Always find a better solution.
+                </Typography>
+                <Typography variant="body1" component="p" color="secondary">
+                    Involvement in more than my own projects.
+                </Typography>
+                <Typography variant="body1" component="p" color="secondary">
+                    Always have an opinion and dare to express it.
+                </Typography>
+            </TextCenterWithPadding>
+        </ValuesSection>
     </Layout>
 )
 
